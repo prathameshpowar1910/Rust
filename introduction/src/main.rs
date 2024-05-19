@@ -28,16 +28,20 @@ fn main() {
     }
 
     //loops
-		for tp in 1..11{
-			println!("The number is: {}", tp);
-		}
+    for tp in 1..11 {
+        println!("The number is: {}", tp);
+    }
 
-		//iterating over a string
-		let sentence: String = String::from("Hellow its peabody");
-		// let first_word = first_word(&sentence);
-		let first_word = get_first_word(sentence);
-		println!("The first word is: {}", first_word);
+    let num: i32 = 10;
+    for _i in 0..num {
+        println!("The number is:");
+    }
 
+    //iterating over a string
+    let sentence: String = String::from("Hellow its peabody");
+    // let first_word = first_word(&sentence);
+    let first_word = get_first_word(sentence);
+    println!("The first word is: {}", first_word);
 }
 
 // function that takes two numbers and returns the sum
@@ -45,16 +49,16 @@ fn add(a: i32, b: i32) -> i32 {
     a + b
 }
 
-fn get_first_word(sentence: String)->String {
-	// let answer: String = String::new();
-	let mut answer: String = String::from("");
-	for char in sentence.chars(){
-		answer.push_str(char.to_string().as_str());
-		if char == ' '{
-			break;
-		}
-	}
-	return answer;
+fn get_first_word(sentence: String) -> String {
+    // let answer: String = String::new();
+    let mut answer: String = String::from("");
+    for char in sentence.chars() {
+        answer.push_str(char.to_string().as_str());
+        if char == ' ' {
+            break;
+        }
+    }
+    return answer;
 }
 
 //how to initialise a rust project steps
